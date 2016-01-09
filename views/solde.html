@@ -6,11 +6,11 @@
 </header>
 
 <section class="main">
-  <div class="operation">
+  <div ng-repeat="o in operations" class="operation">
     <div>
-      <div>09/01/2016</div>
-      <div>Macbook pro</div>
-      <div>- 2499,90 €</div>
+      <div>{{ o.date }}</div>
+      <div>{{ o.label }}</div>
+      <div>{{ o.price }}</div>
 
       <div class="clearfix"></div>
     </div>
@@ -18,20 +18,10 @@
     <button class="icon-bin2"></button>
   </div>
 
-  <div ng-repeat="o in operations" class="operation">
-    <div>
-      <div>{{ o.date }}</div>
-      <div>{{ o.label }}</div>
-      <div>{{ o.price }}</div>
-    </div>
-
-    <button></button>
-  </div>
-
   <div class="form">
-    <input ng-model="new.date" type="text">
-    <input ng-model="new.label" type="text">
-    <input ng-model="new.prix" type="text">
+    <input ng-model="new.date" type="text" placeholder="01/01/1970">
+    <input ng-model="new.label" type="text" placeholder="CAF">
+    <input ng-model="new.prix" type="text" placeholder="+ 250 €">
 
     <button class="icon-checkmark"></button>
   </div>
