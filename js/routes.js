@@ -13,7 +13,7 @@ myApp.config(['$routeProvider',
         controller: 'homeCtrl'
       })
       .when('/operation', {
-        templateUrl: 'views/operation.html',
+        templateUrl: 'views/solde.html',
         controller: 'operationCtrl'
       })
       .otherwise({
