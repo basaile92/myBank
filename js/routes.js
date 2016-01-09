@@ -17,7 +17,7 @@ myApp.config(['$routeProvider',
         controller: 'operationCtrl'
       })
       .otherwise({
-	redirectTo: '/home/world !'
+	       redirectTo: '/'
       });
   }
 ]);
