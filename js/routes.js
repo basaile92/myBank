@@ -8,10 +8,13 @@ myApp.config(['$routeProvider',
   function($routeProvider){
 
     $routeProvider
-      .when('/home/:name', {
-
+      .when('/', {
         templateUrl: 'views/home.html',
         controller: 'homeCtrl'
+      })
+      .when('/operation', {
+        templateUrl: 'views/operation.html',
+        controller: 'operationCtrl'
       })
       .otherwise({
 	redirectTo: '/home/world !'
