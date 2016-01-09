@@ -1,6 +1,16 @@
 var myAppControllers = angular.module('myAppControllers', []);
 
-myApp.controller('homeCtrl', ['$scope', '$routeParams', function($scope, $routeParams){
+myApp.controller('homeCtrl', ['$scope',
+	function($scope){
 
-	$scope.name = $routeParams.name;
+		var date = new Date();
+		var fulldate = date.getDay() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+		$scope.date = 
+		$scope.solde=230;
+
+}]);
+myApp.controller('operationCtrl' ,['$scope',
+  function($scope){
+
+
 }]);
