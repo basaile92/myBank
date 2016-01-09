@@ -20,7 +20,8 @@ myApp.controller('homeCtrl', ['$scope',
 		$scope.date = fulldate;
 
 		//Gestion du solde
-		$scope.solde=230;
+		var solde = 230;
+		$scope.solde=solde.toString() + " €";
 
 }]);
 myApp.controller('operationCtrl' ,['$scope',
@@ -28,11 +29,11 @@ myApp.controller('operationCtrl' ,['$scope',
 
 		//Gestion
 		var op1 = {
-							"date" : (new Date()).getDate(),
+							"date" : "29/12/1992",
 							"label" : "Sextoy veineux",
-							"price" : 15
+							"price" : "15 €"
 							}
-		operations = [op1];
+		$scope.operations = [op1];
 
 
 }]);

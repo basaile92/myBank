@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="/views/css/solde.css">
+
 <header>
-  <button>Retour</button>
+  <img src="/views/images/logo-header.png" alt="logo-header"/>
   <h1>MyBank</h1>
 </header>
 
@@ -15,5 +17,26 @@
     <div><input ng-model="new.label" type="text"></div>
     <div><input ng-model="new.price" type="number"></div>
     <div><button>Valid</button></div>
+
+<section class="main">
+  <div ng-repeat="o in operations" class="operation">
+    <div>
+      <div>{{ o.date }}</div>
+      <div>{{ o.label }}</div>
+      <div>{{ o.price }}</div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <button class="icon-bin2"></button>
+  </div>
+
+  <div class="form">
+    <input ng-model="new.date" type="text" placeholder="01/01/1970">
+    <input ng-model="new.label" type="text" placeholder="CAF">
+    <input ng-model="new.prix" type="text" placeholder="+ 250 €">
+
+    <button class="icon-checkmark"></button>
+
   </div>
 </section>
